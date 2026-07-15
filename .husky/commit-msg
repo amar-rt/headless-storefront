@@ -1,0 +1,9 @@
+commit_msg_file="$1"
+subject=$(grep -v '^#' "$commit_msg_file" | grep -m 1 '.')
+length=${#subject}
+
+if [ "$length" -lt 30 ]; then
+  echo "Commit message subject must be at least 30 characters long (got $length)."
+  echo "Subject: \"$subject\""
+  exit 1
+fi
