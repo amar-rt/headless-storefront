@@ -49,8 +49,6 @@ export default function ProductPage({ params }: { params: RouteParams }) {
             srcSet={shopifyImageSrcSet(image.url)}
             sizes="(min-width: 900px) 50vw, 100vw"
             alt={image.altText || product.title}
-            width={image.width}
-            height={image.height}
           />
         )}
       </div>

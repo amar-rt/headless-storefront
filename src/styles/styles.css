@@ -482,6 +482,7 @@ button {
 }
 .cart-line img {
   border-radius: var(--radius-card);
+  object-fit: cover;
 }
 .cart-line-title {
   margin: 0;
@@ -574,6 +575,7 @@ button {
 .product-detail {
   display: grid;
   grid-template-columns: 1fr;
+  align-items: start;
   gap: 2rem;
   padding-top: 2rem;
 }
@@ -582,9 +584,16 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 }
-.product-gallery img {
+.product-gallery {
   border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--color-bg-alt);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.product-gallery img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
 }
 .product-price {
   font-size: 1.35rem;

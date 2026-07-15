@@ -19,8 +19,6 @@ export default function ProductCard({ product }: { product: ProductCardFields })
             sizes="(min-width: 700px) 25vw, 50vw"
             alt={image.altText || product.title}
             loading="lazy"
-            width={image.width}
-            height={image.height}
           />
         )}
         {onSale && <span className="badge badge-sale">Sale</span>}
