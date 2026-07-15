@@ -103,12 +103,15 @@ button {
   opacity: 0.9;
 }
 
-/* Header */
+/* Header — "Test Electronics" brand redesign: sticky/blurred, Space
+   Grotesk + Inter, navy/teal accent, CSS-drawn logo mark (no markup
+   changes — the mark is a background-image on .brand::before). */
 .site-header {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--brand-footer-border);
   position: sticky;
   top: 0;
-  background: var(--color-bg);
+  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  backdrop-filter: blur(8px);
   z-index: 20;
 }
 .header-inner {
@@ -117,12 +120,27 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 1rem 1.25rem;
+  padding: 0.9rem 1.25rem;
 }
 .brand {
-  font-family: var(--font-heading);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--brand-font-heading);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  color: var(--brand-navy);
+}
+.brand::before {
+  content: "";
+  display: block;
+  width: 1.7rem;
+  height: 1.7rem;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect x='1' y='1' width='28' height='28' rx='7' fill='oklch(0.28 0.06 255)'/%3E%3Cpath d='M15 6 8 17h6l-2 7 10-12h-6.5z' fill='oklch(0.72 0.09 230)'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .nav-toggle {
   display: inline-flex;
@@ -132,7 +150,7 @@ button {
   border: none;
   padding: 0.4rem;
   margin: -0.4rem 0.5rem -0.4rem -0.4rem;
-  color: var(--color-text);
+  color: var(--brand-navy);
   cursor: pointer;
   border-radius: var(--radius-button);
 }
@@ -141,23 +159,33 @@ button {
 }
 .site-nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 0.3rem;
   flex: 1;
+  font-family: var(--brand-font-body);
+}
+.site-nav a {
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+}
+.site-nav a:hover {
+  background: color-mix(in srgb, var(--brand-navy) 8%, transparent);
+  color: var(--brand-navy);
 }
 .cart-toggle {
   position: relative;
   display: inline-flex;
   align-items: center;
   background: transparent;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--brand-footer-border);
   border-radius: var(--radius-button);
   padding: 0.5rem 0.75rem;
   cursor: pointer;
-  color: var(--color-text);
+  color: var(--brand-navy);
 }
 .cart-toggle:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+  border-color: var(--brand-navy);
+  background: color-mix(in srgb, var(--brand-navy) 6%, transparent);
 }
 .cart-count {
   display: inline-flex;
@@ -167,7 +195,7 @@ button {
   height: 1.25rem;
   margin-left: 0.4rem;
   border-radius: 999px;
-  background: var(--color-accent);
+  background: var(--brand-warm);
   color: #fff;
   font-size: 0.75rem;
   padding: 0 0.3rem;
@@ -185,7 +213,7 @@ button {
     flex-direction: column;
     gap: 0;
     background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--brand-footer-border);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
     max-height: 0;
     overflow: hidden;
@@ -196,6 +224,7 @@ button {
   }
   .site-nav a {
     padding: 0.9rem 1.25rem;
+    border-radius: 0;
     border-top: 1px solid var(--color-border);
   }
 }
@@ -213,12 +242,13 @@ button {
   }
 }
 
-/* Footer */
+/* Footer — dark-navy brand panel, same logo mark inverted, Inter body. */
 .site-footer {
-  border-top: 1px solid var(--color-border);
-  padding: 2rem 0;
+  background: var(--brand-navy-dark);
+  color: var(--brand-footer-text);
+  padding: 2.75rem 0;
   margin-top: 3rem;
-  color: var(--color-text-muted);
+  font-family: var(--brand-font-body);
 }
 .footer-inner {
   display: flex;
@@ -227,9 +257,35 @@ button {
   flex-wrap: wrap;
   gap: 1rem;
 }
+.footer-inner p {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  color: var(--brand-footer-text-muted);
+  font-size: 0.85rem;
+}
+.footer-inner p::before {
+  content: "";
+  display: block;
+  width: 1.35rem;
+  height: 1.35rem;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect x='1' y='1' width='28' height='28' rx='7' fill='oklch(0.72 0.09 230)'/%3E%3Cpath d='M15 6 8 17h6l-2 7 10-12h-6.5z' fill='oklch(0.16 0.025 255)'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .footer-inner nav {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5rem;
+}
+.footer-inner nav a {
+  color: var(--brand-footer-link);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.footer-inner nav a:hover {
+  color: var(--brand-teal);
 }
 
 /* Hero */

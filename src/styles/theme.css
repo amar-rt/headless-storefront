@@ -1,3 +1,6 @@
+/* Space Grotesk / Inter — used only by the header/footer brand tokens below. */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
 /* ============================================================
    Theme tokens — the ONE file to edit to re-skin this storefront
    for a different Shopify store. Nothing outside this file should
@@ -91,4 +94,24 @@
   --color-button-label: var(--scheme-4-button-label);
   --color-accent: var(--scheme-4-accent);
   --color-card-bg: #232a31;
+}
+
+/* ============================================================
+   "Test Electronics" brand tokens — scoped to the header and
+   footer only (per the branding redesign), sourced from the
+   provided brand mockup. The rest of the site keeps the
+   re-skinnable scheme above untouched.
+   ============================================================ */
+:root {
+  --brand-font-heading: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --brand-font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --brand-navy: oklch(0.28 0.06 255);
+  --brand-navy-dark: oklch(0.16 0.025 255);
+  --brand-navy-panel: oklch(0.24 0.02 255);
+  --brand-teal: oklch(0.72 0.09 230);
+  --brand-warm: oklch(0.55 0.16 30);
+  --brand-footer-text: oklch(0.78 0.015 250);
+  --brand-footer-text-muted: oklch(0.62 0.015 250);
+  --brand-footer-link: oklch(0.7 0.015 250);
+  --brand-footer-border: oklch(0.3 0.02 255);
 }
