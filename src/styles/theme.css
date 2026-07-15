@@ -1,0 +1,94 @@
+/* ============================================================
+   Theme tokens — the ONE file to edit to re-skin this storefront
+   for a different Shopify store. Nothing outside this file should
+   hardcode a color, radius, or font — components only ever consume
+   the semantic aliases below.
+
+   Raw --scheme-*  tokens are a literal transcription of the source
+   theme's color schemes (kept for reference / easy re-selection).
+   ============================================================ */
+:root {
+  /* Scheme 1 — neutral, section bands / alt backgrounds */
+  --scheme-1-bg: #f4f4f4;
+  --scheme-1-text: #2b2c2d;
+  --scheme-1-button: #b7aca2;
+  --scheme-1-button-label: #262626;
+  --scheme-1-accent: #001128;
+
+  /* Scheme 2 — default/card scheme, primary surface */
+  --scheme-2-bg: #ffffff;
+  --scheme-2-text: #262626;
+  --scheme-2-button: #797068;
+  --scheme-2-button-label: #ffffff;
+  --scheme-2-accent: #797572;
+
+  /* Scheme 3 — warm taupe band, secondary sections */
+  --scheme-3-bg: #c2b7ac;
+  --scheme-3-text: #262626;
+  --scheme-3-button: #fdfdfd;
+  --scheme-3-button-label: #262626;
+  --scheme-3-accent: #54483c;
+
+  /* Scheme 4 — dark scheme, footer / dark mode */
+  --scheme-4-bg: #1c2228;
+  --scheme-4-text: #ffffff;
+  --scheme-4-button: #ffffff;
+  --scheme-4-button-label: #001128;
+  --scheme-4-accent: #ffffff;
+
+  /* Scheme 5 — sale/badge accents */
+  --scheme-5-bg: #323841;
+  --scheme-5-text: #ffffff;
+  --scheme-5-button: #b7aca2;
+  --scheme-5-button-label: #262626;
+
+  /* Shared shadow/border accent across all schemes */
+  --color-shadow-accent: #001128;
+
+  /* --- Semantic aliases — what components actually consume --- */
+  --color-bg: var(--scheme-2-bg);
+  --color-bg-alt: var(--scheme-1-bg);
+  --color-text: var(--scheme-2-text);
+  --color-text-muted: #6b6a66;
+  --color-border: #e2ded8;
+  --color-button: var(--scheme-2-button);
+  --color-button-label: var(--scheme-2-button-label);
+  --color-accent: var(--scheme-2-accent);
+  --color-card-bg: #ffffff;
+  --color-sale-bg: var(--scheme-5-bg);
+  --color-sale-text: var(--scheme-5-text);
+
+  /* Typography (Google Fonts equivalents of the source theme's DM Sans / Jost —
+     the original self-hosts via Shopify's CDN, unreachable from this project) */
+  --font-heading: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-weight-heading: 500;
+  --font-weight-body: 400;
+  --heading-scale: 1.05;
+
+  /* Shape */
+  --radius-button: 6px;
+  --radius-pill: 40px;
+  --radius-card: 8px;
+  --radius-input: 6px;
+  --radius-popup: 8px;
+  --border-width-button: 1px;
+  --shadow-button: 0 4px 5px rgba(0, 17, 40, 0.12);
+
+  /* Layout */
+  --page-max-width: 1200px;
+  --grid-gap-desktop: 12px;
+  --grid-gap-mobile: 6px;
+}
+
+[data-theme="dark"] {
+  --color-bg: var(--scheme-4-bg);
+  --color-bg-alt: #262d35;
+  --color-text: var(--scheme-4-text);
+  --color-text-muted: #aab0b6;
+  --color-border: #323a42;
+  --color-button: var(--scheme-4-button);
+  --color-button-label: var(--scheme-4-button-label);
+  --color-accent: var(--scheme-4-accent);
+  --color-card-bg: #232a31;
+}
