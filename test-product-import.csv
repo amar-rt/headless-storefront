@@ -1,4 +1,0 @@
-Handle,Title,Body (HTML),Vendor,Product Category,Type,Tags,Published,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Variant SKU,Variant Grams,Variant Inventory Tracker,Variant Inventory Qty,Variant Inventory Policy,Variant Fulfillment Service,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Variant Weight Unit,Gift Card,SEO Title,SEO Description,Status
-test-tee,Test T-Shirt,"<p>A simple test product for storefront development. Soft cotton tee, true to size.</p>",Test Vendor,Apparel & Accessories > Clothing > Shirts & Tops,Shirt,"test,sample",TRUE,Size,Small,Color,Black,TEST-TEE-S-BLK,200,shopify,50,deny,manual,19.99,24.99,TRUE,TRUE,g,FALSE,Test T-Shirt,A simple test product for storefront development.,active
-test-tee,,,,,,,,,Medium,,Black,TEST-TEE-M-BLK,200,shopify,50,deny,manual,19.99,24.99,TRUE,TRUE,g,,,,
-test-tee,,,,,,,,,Large,,Black,TEST-TEE-L-BLK,200,shopify,50,deny,manual,19.99,24.99,TRUE,TRUE,g,,,,

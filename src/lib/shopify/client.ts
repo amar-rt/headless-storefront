@@ -41,9 +41,4 @@ export async function shopifyFetch<T = unknown>(query: string, variables: object
 export const config = {
   productsPerPage: Number(import.meta.env.VITE_SHOPIFY_PRODUCTS_PER_PAGE) || 24,
   articlesPerPage: Number(import.meta.env.VITE_SHOPIFY_ARTICLES_PER_PAGE) || 10,
-  defaultBlogHandle: import.meta.env.VITE_SHOPIFY_DEFAULT_BLOG_HANDLE || "news",
-  featuredCollections: (import.meta.env.VITE_SHOPIFY_FEATURED_COLLECTIONS || "")
-    .split(",")
-    .map((s) => s.trim())
-    .filter(Boolean),
 };
